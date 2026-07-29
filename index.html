@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Atlas Splitter — Split game atlases into clean tiles</title>
+  <meta name="description" content="Mac tool for indie game art: auto-frame sprites from atlases, then export clean tiles locally. One-time purchase." />
+  <style>
+    :root {
+      --ink: #1a1a1a;
+      --muted: #5a5a5a;
+      --line: #e4e4e4;
+      --bg: #f7f5f2;
+      --accent: #2c5f4a;
+      --accent-hover: #234c3c;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, #ebe6df 0%, transparent 55%),
+        radial-gradient(900px 500px at 100% 0%, #e2ebe6 0%, transparent 50%),
+        var(--bg);
+      line-height: 1.5;
+    }
+    .wrap { max-width: 40rem; margin: 0 auto; padding: 0 1.35rem; }
+    header {
+      padding: 4.5rem 0 3.25rem;
+      min-height: min(88vh, 42rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .brand {
+      font-size: 0.85rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      font-weight: 600;
+      margin: 0 0 1.25rem;
+    }
+    h1 {
+      font-size: clamp(2rem, 5vw, 2.75rem);
+      line-height: 1.15;
+      font-weight: 600;
+      margin: 0 0 1rem;
+      letter-spacing: -0.02em;
+    }
+    .lede {
+      font-size: 1.125rem;
+      color: var(--muted);
+      margin: 0 0 1.75rem;
+      max-width: 34rem;
+    }
+    .cta { display: flex; flex-wrap: wrap; gap: 0.75rem 1rem; align-items: center; }
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 1.15rem;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: 2px;
+    }
+    .btn:hover { background: var(--accent-hover); }
+    .btn-ghost {
+      background: transparent;
+      color: var(--accent);
+      padding-left: 0.25rem;
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+      font-weight: 500;
+    }
+    .btn-ghost:hover { background: transparent; color: var(--accent-hover); }
+    .micro {
+      margin: 1.1rem 0 0;
+      font-size: 0.9rem;
+      color: var(--muted);
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+    }
+    section {
+      padding: 2.5rem 0;
+      border-top: 1px solid var(--line);
+    }
+    section h2 {
+      font-size: 1.35rem;
+      margin: 0 0 0.5rem;
+      font-weight: 600;
+    }
+    section p { margin: 0; color: var(--muted); }
+    .note {
+      font-size: 0.95rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+    footer {
+      padding: 2.5rem 0 3.5rem;
+      border-top: 1px solid var(--line);
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    footer a { color: var(--accent); }
+    footer .price { color: var(--ink); font-weight: 600; margin-bottom: 0.75rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <p class="brand">Atlas Splitter</p>
+      <h1>Split game atlases into clean tiles—fast.</h1>
+      <p class="lede">
+        Auto-frame dozens or hundreds of sprites from one sheet, then export locally in about two minutes.
+        Built for indie game art.
+      </p>
+      <div class="cta">
+        <!-- Replace BUY_URL when Lemon Squeezy product is live -->
+        <a class="btn" href="#buy">Buy for Mac — $7.99</a>
+        <!-- Show after MAS approval: https://apps.apple.com/app/id6794577665 -->
+        <a class="btn btn-ghost" href="privacy/">Privacy</a>
+      </div>
+      <p class="micro">No account. No cloud. Art stays on your Mac.</p>
+    </header>
+
+    <section>
+      <h2>Auto Frame</h2>
+      <p>Click the background once to box many sprites at once—ideal for clear sheets on transparent or solid fills.</p>
+    </section>
+    <section>
+      <h2>Grid &amp; Freehand</h2>
+      <p>Regular tilesets with margin and spacing, or freehand boxes when the layout is irregular.</p>
+    </section>
+    <section>
+      <h2>Magic Wand</h2>
+      <p>Select and clear backgrounds to transparency when auto-frame needs a cleaner pass.</p>
+    </section>
+    <section>
+      <h2>Export for your pipeline</h2>
+      <p>Batch-export PNG, JPG, or BMP tiles with names you control. Ready for 2D games and UI atlases.</p>
+    </section>
+    <section>
+      <p class="note">Works best when sprites are clearly separated. Sticky or complex art: use Freehand or Wand.</p>
+    </section>
+
+    <footer id="buy">
+      <p class="price">Atlas Splitter for Mac — one-time purchase, $7.99.</p>
+      <p>
+        <a href="#buy">Buy</a> ·
+        <a href="privacy/">Privacy</a> ·
+        <a href="support/">Support</a>
+      </p>
+      <p style="margin-top:1.25rem;font-size:0.8rem;">Buy link placeholder — wire to Lemon Squeezy or Mac App Store when ready.</p>
+    </footer>
+  </div>
+</body>
+</html>
