@@ -4,98 +4,85 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Atlas Splitter — 지원（한국어）</title>
-  <meta name="description" content="스프라이트 시트와 아틀라스 분할" />
+  <meta name="description" content="Mac 아틀라스 분할 도움말: 자동 프레임, 그리드, 프리핸드, 마법 봉, 내보내기." />
   <link rel="stylesheet" href="../guide.css" />
 </head>
 <body>
   <div class="wrap">
     <p class="brand">Atlas Splitter</p>
     <h1>Atlas Splitter</h1>
-    <p class="tagline">스프라이트 시트와 아틀라스 분할</p>
+    <p class="tagline">게임 아틀라스를 깔끔한 타일로—빠르게.</p>
     <nav class="langbar" aria-label="Language"><a href="../en/">English</a> · <a href="../zh/">中文</a> · <a href="../ja/">日本語</a> · <a href="../ko/" class="current">한국어</a></nav>
 
-    <p class="lede">Atlas Splitter는 인디 게임 개발자와 2D / 픽셀 아티스트를 위한 macOS 아틀라스 분할 도구입니다. 스프라이트 시트, UI 합성, 타일 아틀라스를 끌어다 놓으면 바로 쓸 수 있는 개별 이미지로 나눕니다. 계정 없음, 클라우드 업로드 없음. 에셋은 항상 Mac에 남습니다.</p>
-    <p class="note">Mac App Store 등록은 심사 중입니다. 출시되면 스토어 링크를 추가합니다. 지금은 <a href="../../">공식 사이트</a>에서 일회성 구매할 수 있습니다.</p>
+    <p class="lede">인디 게임 아트용 Mac 도구입니다. 한 장의 아틀라스에서 자동 프레임, 그리드 또는 프리핸드 박스, 마법 봉 정리 후 로컬로 내보냅니다. 계정 없음, 클라우드 없음. 에셋은 Mac에만 남습니다.</p>
+    <p class="note">스프라이트가 분명히 떨어져 있을 때 가장 잘 됩니다. 붙거나 배경이 복잡하면 프리핸드 또는 마법 봉을 쓰세요. <a href="../../">공식 사이트</a>에서 일회 구매($7.99). Mac App Store 심사 후 스토어 링크를 추가합니다.</p>
 
     <h2>빠른 시작</h2>
     <ol class="steps">
-      <li>아틀라스 열기(드래그 앤 드롭 또는 파일 → 열기).</li>
-      <li><strong>그리드</strong> 또는 <strong>프리</strong> 모드 선택.</li>
-      <li>PNG / JPG / BMP를 일괄 내보낸 뒤 게임 프로젝트에 넣기.</li>
+      <li>아틀라스 열기(드래그 앤 드롭 또는 파일 → 열기). 앱에 Samples 포함.</li>
+      <li>사이드바에서 <strong>그리드</strong> / <strong>프리</strong> 전환.</li>
+      <li>타일(또는 아틀라스 + JSON)을 선택한 폴더로 내보낸 뒤 게임 프로젝트에 넣기.</li>
     </ol>
 
-    <h2>세 가지 명확한 경로</h2>
-    <h3>1) 그리드(규칙적 배치)</h3>
-    <p>스프라이트가 정렬되어 있으면 셀 너비/높이, 행/열, 여백, 간격을 설정한 뒤 한 번에 분할합니다.</p>
+    <h2>기능(공식 사이트 소개과 동일)</h2>
 
-    <h3>2) 프리(불규칙 배치)</h3>
-    <p>정렬되지 않았을 때 사용할 수 있는 방법:</p>
+    <h3>자동 프레임</h3>
+    <p>프리 모드에서 배경을 한 번 클릭하면 많은 스프라이트를 한 번에 박스 — 투명 또는 단색 배경의 명확한 시트에 적합. PNG는 투명, JPG/BMP는 단색 키를 클릭. 설정 → 자동 프레임 → 최소 크기…(또는 Auto 도구 더블클릭)로 작은 섬 무시(기본 약 ≤ 8×8).</p>
+
+    <h3>그리드와 프리핸드</h3>
+    <p><strong>그리드:</strong> 규칙적인 타일셋 — 셀 크기, 행/열, 여백, 간격. 가장자리 모드: <em>자르기</em>(남는 가장자리 픽셀 버림, 완전한 셀만) 또는 <em>패딩</em>(셀 크기 유지, 추가 행/열은 투명). 셀에 마우스를 올리면 미리보기.</p>
+    <p><strong>프리:</strong> 배치가 불규칙하면 사각형을 직접 그림. 핸들로 크기 조절. 셀 목록에서 정리·이름 변경. 우클릭으로 불투명 영역에 맞춤 / 목록에 추가 / 이미지 복사 / 삭제. 겹침: 우클릭 → 선택 → #id.</p>
+
+    <h3>마법 봉</h3>
+    <p>자동 프레임 후 배경이 지저분하면 선택해 투명으로 지웁니다. 불투명 픽셀 클릭, Shift+클릭으로 추가. 우클릭: 1px 확장 / 1px 축소 / 투명으로 / 반전 / 선택 해제. 봉 더블클릭(또는 설정 → 마법 봉 → 허용치…)으로 감도 조절. 실행 취소 / 다시 실행 지원.</p>
+
+    <h3>파이프라인용 내보내기</h3>
     <ul>
-      <li>마법 봉으로 배경 제거 + 수동 사각형으로 미세 조정</li>
-      <li>투명 또는 단색 배경을 클릭(자동)해 많은 개별 스프라이트를 박스</li>
-      <li>셀 목록에서 일괄 이름 변경 및 정리</li>
+      <li>PNG / JPG / BMP 타일을 일괄 내보내기. 이름은 직접 제어.</li>
+      <li>선택적 <strong>아틀라스 + JSON</strong>(한 장 + 프레임 표).</li>
+      <li>설정 → 내보내기 형식: PNG(투명 유지), JPG / BMP(흰 배경), 또는 원본 따름.</li>
+      <li>설정 → 파일명 템플릿: 기본(이름 또는 tile_###), {name}, {name}_{index}, tile_{index}.</li>
     </ul>
 
-    <h3>3) 내보내기 및 가장자리 처리</h3>
+    <h2>프리 모드의 도구</h2>
     <ul>
-      <li>불투명 영역에 맞춤, 또는 투명 패딩 유지 / 추가</li>
-      <li>파일 이름 템플릿으로 PNG / JPG / BMP 일괄 내보내기</li>
-      <li>로컬 처리만 — 업로드 없음, 사용자 데이터 수집 없음</li>
+      <li><strong>지우개</strong> — 알파를 지우는 하드 사각(1–16 px). 우클릭 또는 더블클릭으로 크기. 실행 취소 가능.</li>
+      <li><strong>불투명 영역에 맞춤</strong> — 프리 / 선택 셀을 불투명 픽셀에 맞게 조임.</li>
+      <li><strong>차트 연동</strong> — 캔버스 선택과 셀 목록 동기화(설정 → 차트 연동, 기본 켜짐).</li>
+      <li><strong>이동 / 확대</strong> — Move 도구, 휠, 두 손가락 스크롤, 핀치. 다른 도구는 Space / 가운데 버튼.</li>
+      <li><strong>세션</strong> — 저장되지 않은 작업을 다음 실행 시 복원(로컬만).</li>
     </ul>
 
-    <h2>설정</h2>
+    <h2>설정 및 UI</h2>
     <dl class="settings">
       <dt>언어</dt>
       <dd>English, 简体中文, 日本語, 한국어.</dd>
       <dt>버튼 테마</dt>
       <dd>차콜, 블러시, 틸, 스틸 블루.</dd>
-      <dt>자동 프레임 → 최소 크기…</dt>
-      <dd>자동 프레임 시 너무 작은 연결 요소 무시(기본 약 ≤ 8×8 건너뜀). Auto 도구를 더블클릭해도 열립니다.</dd>
-      <dt>마법 봉 → 허용치…</dt>
-      <dd>색 선택 감도 조정. 봉 도구를 더블클릭해도 열립니다.</dd>
-      <dt>내보내기 형식</dt>
-      <dd>PNG(투명 유지), JPG / BMP(흰 배경), 또는 원본에 맞춤.</dd>
-      <dt>파일 이름 템플릿</dt>
-      <dd>이름, prefix_index, tile_index 등.</dd>
-      <dt>캔버스 ↔ 목록 동기화</dt>
-      <dd>프리 캔버스 선택과 셀 목록 동기화(기본 켜짐).</dd>
+      <dt>단축키</dt>
+      <dd>도움말 → 단축키…</dd>
     </dl>
 
-    <h2>누구를 위한 앱인가</h2>
-    <p>Atlas Splitter는 “SNS용 그리드 자르기”용이 아닙니다. 게임 파이프라인에서 반복되는 분할 작업—큰 시트 안의 수백 개 소품, 캐릭터 프레임, UI 슬라이스—수동 박스는 너무 느리고, 순수 그리드는 자주 맞지 않습니다.</p>
-    <p>투명하고 형태가 분명한 아틀라스에서는 자동 프레임 + 내보내기가 보통 몇 분 정도입니다. 배경이 복잡하면 프리 + 마법 봉이 안정적인 대안입니다(실행 취소 가능).</p>
+    <h2>누구를 위한가</h2>
+    <p>인디 / 소규모 2D 개발자와 픽셀 아티스트용 — “SNS용 그리드”가 아닙니다. 투명하고 형태가 분명하면 자동 프레임 + 내보내기가 보통 몇 분. 복잡한 배경은 프리 + 봉으로 반복(실행 취소 가능).</p>
 
     <h2>라이선스</h2>
     <ul>
-      <li>일회성 구매</li>
-      <li>짧은 흐름: 열기 → 그리드 / 프리 → 내보내기</li>
-      <li>인디 개발자, 픽셀 아티스트, 프리랜서용</li>
+      <li>일회 구매 $7.99(구독 아님).</li>
+      <li>macOS 데스크톱. 공식 사이트 공증 .dmg, Mac App Store 제출됨.</li>
+      <li>열고 내보내는 이미지의 저작권은 사용자 책임입니다.</li>
     </ul>
-
-    <h2>변경 기록</h2>
-    <p>초기 출시 단계. 이미 포함된 주요 기능:</p>
-    <table>
-      <thead><tr><th>기능</th><th>설명</th></tr></thead>
-      <tbody>
-        <tr><td>불투명 영역에 맞춤</td><td>프리 / 선택 셀을 불투명 픽셀에 맞게 조임</td></tr>
-        <tr><td>봉 확대 / 축소</td><td>선택 ±1 px 하드 모폴로지</td></tr>
-        <tr><td>파일 이름 템플릿</td><td>설정 → 파일 이름 템플릿</td></tr>
-        <tr><td>지우개</td><td>알파를 지우는 하드 사각 브러시(1–16 px), 실행 취소 가능</td></tr>
-      </tbody>
-    </table>
-    <p>이후 개선 사항은 이 페이지에 게시합니다.</p>
 
     <h2>지원 및 개인정보</h2>
     <div class="contact-box">
       <p><strong>연락처:</strong> <a href="mailto:917097871@qq.com">917097871@qq.com</a></p>
-      <p><strong>개인정보:</strong> <a href="../../privacy/">개인정보 처리방침</a></p>
-      <p><strong>이용약관:</strong> <a href="../../terms/">이용약관</a></p>
+      <p><strong>개인정보:</strong> <a href="../../privacy/">개인정보 처리방침</a> · <strong>약관:</strong> <a href="../../terms/">이용약관</a></p>
     </div>
     <h3>자주 묻는 질문</h3>
     <ul>
-      <li><strong>이미지를 어떻게 여나요?</strong> 파일 → 열기, 또는 앱 번들의 Samples.</li>
-      <li><strong>내보내기 형식:</strong> 선택한 폴더로 PNG / JPG / BMP.</li>
-      <li><strong>개인정보:</strong> 이미지는 Mac에서만 처리. 자세한 내용은 개인정보 처리방침.</li>
+      <li><strong>여는 방법:</strong> 파일 → 열기, 드래그 앤 드롭, 또는 Samples.</li>
+      <li><strong>형식:</strong> PNG / JPG / JPEG / BMP. 아틀라스 + JSON도 가능.</li>
+      <li><strong>개인정보:</strong> Mac에서만 처리. 자세한 내용은 개인정보 처리방침.</li>
     </ul>
 
     <footer class="page">

@@ -4,98 +4,85 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Atlas Splitter — 支持说明（中文）</title>
-  <meta name="description" content="分割精灵表与图集" />
+  <meta name="description" content="Mac 图集切分帮助：自动框选、网格、手绘、魔棒、导出。" />
   <link rel="stylesheet" href="../guide.css" />
 </head>
 <body>
   <div class="wrap">
     <p class="brand">Atlas Splitter</p>
     <h1>Atlas Splitter</h1>
-    <p class="tagline">分割精灵表与图集</p>
+    <p class="tagline">把游戏图集，切成干净的小图。</p>
     <nav class="langbar" aria-label="Language"><a href="../en/">English</a> · <a href="../zh/" class="current">中文</a> · <a href="../ja/">日本語</a> · <a href="../ko/">한국어</a></nav>
 
-    <p class="lede">Atlas Splitter 是面向独立游戏开发者与 2D / 像素美术的 macOS 图集切分工具。拖入精灵表、UI 拼图或瓦片图集，即可切成可直接使用的单张图片——无需账号、不上传云端，素材始终留在你的 Mac 上。</p>
-    <p class="note">Mac App Store 上架审核中，通过后会在此补充商店链接。当前也可在<a href="../../">官网首页</a>一次性购买。</p>
+    <p class="lede">面向独立游戏美术的 Mac 切图工具：一张图集自动框选、网格或手绘框、魔棒清理，再本机导出。无账号、不上传，素材只留在你的 Mac。</p>
+    <p class="note">图元分离清晰时效果最好；粘连或背景复杂时，用手绘或魔棒补。官网<a href="../../">首页</a>可一次性购买（$7.99）。Mac App Store 过审后会在此补充商店链接。</p>
 
     <h2>快速开始</h2>
     <ol class="steps">
-      <li>打开图集（拖放，或「文件 → 打开」）。</li>
-      <li>选择<strong>网格</strong>或<strong>手绘</strong>模式。</li>
-      <li>批量导出 PNG / JPG / BMP，再放进你的游戏工程。</li>
+      <li>打开图集（拖放或「文件 → 打开」）。应用内附带 Samples 样例。</li>
+      <li>侧栏切换<strong>网格</strong>或<strong>手绘</strong>模式。</li>
+      <li>导出小图（或图集 + JSON）到你选择的文件夹，再放进游戏工程。</li>
     </ol>
 
-    <h2>三条清晰路径</h2>
-    <h3>1）网格（规则布局）</h3>
-    <p>精灵排列整齐时，设置格子宽高、行列、外边距与间距，一次切完整张图。</p>
+    <h2>能力（与官网介绍一致）</h2>
 
-    <h3>2）手绘（不规则布局）</h3>
-    <p>排列不规整时，你可以：</p>
+    <h3>自动框选</h3>
+    <p>在手绘模式中点一下背景，即可批量框出图元——透明底或纯色底效果最好。PNG 点透明；JPG/BMP 点实色底。设置 → 自动框选 → 最小尺寸…（或双击「框选」工具）可忽略过小岛（默认约 ≤ 8×8）。</p>
+
+    <h3>网格与手绘</h3>
+    <p><strong>网格：</strong>规整 tileset — 设置格子大小、行列、外边距与间距。边缘模式：<em>裁掉余量</em>（丢弃凑不满一格的边缘像素）或<em>透明补边</em>（格子大小不变，多出的行列用透明填充）。悬停格子可预览图元。</p>
+    <p><strong>手绘：</strong>布局不规则时自由画框；拖手柄改大小；在单元列表中整理与重命名。右键可「收紧到内容」「加入列表」「复制图像」「删除」。重叠时：右键 → 选中 → #id。</p>
+
+    <h3>魔棒</h3>
+    <p>自动框选不够干净时，用魔棒选区并清成透明。点击不透明像素；Shift+点击加选。右键：扩张 1px / 收缩 1px / 设为透明 / 反选 / 取消选择。双击魔棒（或 设置 → 魔棒 → 容差…）调节灵敏度。支持撤销 / 重做。</p>
+
+    <h3>导出到你的管线</h3>
     <ul>
-      <li>用魔棒去背景 + 手动画框微调</li>
-      <li>点击透明或纯色背景（框选）自动框出大量单体</li>
-      <li>在单元列表中批量重命名与整理</li>
+      <li>批量导出 PNG / JPG / BMP 小图，文件名可按习惯控制。</li>
+      <li>可选<strong>图集 + JSON</strong>，方便常见 2D 管线（整图 + 帧表）。</li>
+      <li>设置 → 导出格式：PNG（保留透明）、JPG / BMP（白底），或跟随源图。</li>
+      <li>设置 → 文件名模板：默认（名称或 tile_###）、{name}、{name}_{index}、tile_{index}。</li>
     </ul>
 
-    <h3>3）导出与边缘处理</h3>
+    <h2>手绘模式更多工具</h2>
     <ul>
-      <li>收紧到内容，或保留 / 增加透明边距</li>
-      <li>按文件名模板批量导出 PNG / JPG / BMP</li>
-      <li>仅本机处理——不上传、不收集用户数据</li>
+      <li><strong>橡皮</strong> — 硬方刷清除透明度（1–16 像素）；右键或双击工具改大小；可撤销。</li>
+      <li><strong>收紧到内容</strong> — 按非透明像素收紧手绘 / 选中格子。</li>
+      <li><strong>图表联动</strong> — 画布选区与单元列表同步（设置 → 图表联动；默认开启）。</li>
+      <li><strong>平移 / 缩放</strong> — 移动工具、滚轮、双指滑动、捏合；其它工具可用 Space / 中键平移。</li>
+      <li><strong>会话</strong> — 未保存的切图可在下次启动时恢复（仅本机）。</li>
     </ul>
 
-    <h2>设置</h2>
+    <h2>设置与界面</h2>
     <dl class="settings">
       <dt>语言</dt>
       <dd>English、简体中文、日本語、한국어。</dd>
       <dt>按钮主题</dt>
       <dd>炭灰、蜜桃粉、青绿、钢蓝。</dd>
-      <dt>自动框选 → 最小尺寸…</dt>
-      <dd>自动框选时忽略过小连通域（默认约跳过 ≤ 8×8）。也可双击「框选」工具打开。</dd>
-      <dt>魔棒 → 容差…</dt>
-      <dd>调整取色灵敏度。也可双击魔棒工具打开。</dd>
-      <dt>导出格式</dt>
-      <dd>PNG（保留透明）、JPG / BMP（白底），或跟随源图。</dd>
-      <dt>文件名模板</dt>
-      <dd>默认与自定义模式，如名称、前缀_序号、tile_序号。</dd>
-      <dt>画布 ↔ 列表同步</dt>
-      <dd>手绘画布选区是否与单元列表自动同步（默认开启）。</dd>
+      <dt>快捷键</dt>
+      <dd>帮助 → 快捷键…（打开、撤销/重做、模式说明、Esc 行为等）。</dd>
     </dl>
 
     <h2>适合谁</h2>
-    <p>Atlas Splitter 不是做「社交媒体九宫格」的。它面向游戏管线里反复出现的切图：一张大图里成百上千道具、角色帧与 UI 切片——手动画框太慢，纯网格又经常对不齐。</p>
-    <p>透明底、形状清晰的图集，自动框选 + 导出通常大约两分钟。背景复杂时，用手绘 + 魔棒迭代修改（可撤销）更稳妥。</p>
+    <p>给独立 / 小团队 2D 开发者与像素美术——不是做「社交媒体九宫格」。透明底、形状清晰时，自动框选 + 导出通常大约两分钟；背景复杂时用手绘 + 魔棒迭代（可撤销）。</p>
 
-    <h2>授权与定位</h2>
+    <h2>授权</h2>
     <ul>
-      <li>一次性买断</li>
-      <li>短流程：打开 → 网格 / 手绘 → 导出</li>
-      <li>给独立开发者、像素美术与自由职业者</li>
+      <li>一次性买断 $7.99（非订阅）。</li>
+      <li>macOS 桌面应用；官网公证 .dmg 下载，并已提交 Mac App Store。</li>
+      <li>您对打开与导出的图片版权自行负责。</li>
     </ul>
-
-    <h2>更新说明</h2>
-    <p>当前为初版阶段。已包含的能力例如：</p>
-    <table>
-      <thead><tr><th>功能</th><th>说明</th></tr></thead>
-      <tbody>
-        <tr><td>收紧到内容</td><td>按非透明像素收紧手绘 / 选中格子</td></tr>
-        <tr><td>魔棒扩大 / 收缩</td><td>选区 ±1 像素硬形态学</td></tr>
-        <tr><td>文件名模板</td><td>设置 → 文件名模板</td></tr>
-        <tr><td>橡皮擦</td><td>硬方刷清除透明度（1–16 像素），可撤销</td></tr>
-      </tbody>
-    </table>
-    <p>后续改进会发布在本页。</p>
 
     <h2>支持与隐私</h2>
     <div class="contact-box">
       <p><strong>联系：</strong> <a href="mailto:917097871@qq.com">917097871@qq.com</a></p>
-      <p><strong>隐私：</strong> <a href="../../privacy/">隐私政策</a></p>
-      <p><strong>条款：</strong> <a href="../../terms/">服务条款</a></p>
+      <p><strong>隐私：</strong> <a href="../../privacy/">隐私政策</a> · <strong>条款：</strong> <a href="../../terms/">服务条款</a></p>
     </div>
     <h3>常见问题</h3>
     <ul>
-      <li><strong>如何打开图片？</strong>「文件 → 打开」，或使用应用内 Samples 样例。</li>
-      <li><strong>导出格式：</strong>PNG / JPG / BMP，保存到你选择的文件夹。</li>
-      <li><strong>隐私：</strong>图片只在本机处理，详见隐私政策。</li>
+      <li><strong>如何打开？</strong>文件 → 打开、拖放，或使用应用内 Samples。</li>
+      <li><strong>格式？</strong>打开与导出支持 PNG / JPG / JPEG / BMP；也可导出图集 + JSON。</li>
+      <li><strong>隐私？</strong>仅本机处理，详见隐私政策。</li>
     </ul>
 
     <footer class="page">

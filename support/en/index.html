@@ -4,98 +4,85 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Atlas Splitter — Support (English)</title>
-  <meta name="description" content="Split sprite sheets & atlases" />
+  <meta name="description" content="Mac atlas splitter help: Auto Frame, Grid, Freehand, Magic Wand, export." />
   <link rel="stylesheet" href="../guide.css" />
 </head>
 <body>
   <div class="wrap">
     <p class="brand">Atlas Splitter</p>
     <h1>Atlas Splitter</h1>
-    <p class="tagline">Split sprite sheets & atlases</p>
+    <p class="tagline">Split game atlases into clean tiles—fast.</p>
     <nav class="langbar" aria-label="Language"><a href="../en/" class="current">English</a> · <a href="../zh/">中文</a> · <a href="../ja/">日本語</a> · <a href="../ko/">한국어</a></nav>
 
-    <p class="lede">Atlas Splitter is a macOS atlas slicing tool for indie game developers and 2D / pixel artists. Drag in a sprite sheet, UI composite, or tile atlas and split it into ready-to-use individual images — no account, no cloud upload. Your assets always stay on your Mac.</p>
-    <p class="note">Mac App Store listing is under review. The store link will be added here once it is live. Direct purchase is available on the <a href="../../">homepage</a>.</p>
+    <p class="lede">A Mac tool for indie game art: auto-frame sprites from one sheet, grid or freehand boxes, magic wand cleanup, then export locally. No account. No cloud. Art stays on your Mac.</p>
+    <p class="note">Works best when sprites are clearly separated. Sticky or complex art: use Freehand or Wand. Direct purchase is on the <a href="../../">homepage</a> ($7.99 one-time). Mac App Store link will appear here after review.</p>
 
     <h2>Quick start</h2>
     <ol class="steps">
-      <li>Open an atlas (drag &amp; drop or File → Open).</li>
-      <li>Choose <strong>Grid</strong> or <strong>Free</strong> mode.</li>
-      <li>Batch export PNG / JPG / BMP — then drop the tiles into your game project.</li>
+      <li>Open an atlas (drag &amp; drop or File → Open). Sample atlases are in the app bundle.</li>
+      <li>Use the sidebar to switch <strong>Grid</strong> or <strong>Free</strong> (freehand) mode.</li>
+      <li>Export tiles (or atlas + JSON) to a folder you choose — then drop them into your game project.</li>
     </ol>
 
-    <h2>Three clear paths</h2>
-    <h3>1) Grid (regular layouts)</h3>
-    <p>When sprites are aligned, set cell width/height, rows/columns, margins, and spacing — then split the whole sheet in one go.</p>
+    <h2>Capabilities (as on the product site)</h2>
 
-    <h3>2) Free (irregular layouts)</h3>
-    <p>When sprites are not aligned, you can:</p>
+    <h3>Auto Frame</h3>
+    <p>In Free mode, click the background once to box many sprites at once — ideal for clear sheets on transparent or solid fills. PNG: click transparent; JPG/BMP: click the solid key color. Settings → Auto Frame → Min Size… (or double-click the Auto tool) skips tiny islands (default about ≤ 8×8).</p>
+
+    <h3>Grid &amp; Freehand</h3>
+    <p><strong>Grid:</strong> regular tilesets — set cell size, rows/columns, margins, and spacing. Edge modes: <em>Crop</em> (discard leftover edge pixels; full cells only) or <em>Pad</em> (keep cell size; extra rows/cols filled with transparency). Hover a cell to preview the tile.</p>
+    <p><strong>Free (Freehand):</strong> draw rectangles when the layout is irregular; resize with handles; organize and rename in the Cells list. Right-click a box for Trim to content, Add to list, Copy Image, or Delete. Overlapping boxes: right-click → Select → #id.</p>
+
+    <h3>Magic Wand</h3>
+    <p>Select and clear backgrounds to transparency when Auto Frame needs a cleaner pass. Click opaque pixels; Shift+click to add. Right-click: Expand 1px / Contract 1px / Make transparent / Invert / Deselect. Double-click the Wand tool (or Settings → Wand → Tolerance…) to adjust sensitivity. Undo / Redo supported.</p>
+
+    <h3>Export for your pipeline</h3>
     <ul>
-      <li>Use Magic Wand background removal + manual rectangles for fine tuning</li>
-      <li>Click transparent or solid-color background (Auto) to frame many individual sprites</li>
-      <li>Batch rename and organize items in the Cells list</li>
+      <li>Batch-export individual PNG / JPG / BMP tiles with names you control.</li>
+      <li>Optional <strong>Atlas + JSON</strong> export for common 2D pipelines (one sheet + frame table).</li>
+      <li>Settings → Export Format: PNG (keeps transparency), JPG / BMP (white background), or match source.</li>
+      <li>Settings → Filename Template: Default (Name or tile_###), {name}, {name}_{index}, tile_{index}.</li>
     </ul>
 
-    <h3>3) Export &amp; edge handling</h3>
+    <h2>More tools in Free mode</h2>
     <ul>
-      <li>Trim to content, or keep / add transparent padding</li>
-      <li>Batch export PNG / JPG / BMP with filename templates</li>
-      <li>Local processing only — no uploads, no user data collection</li>
+      <li><strong>Eraser</strong> — hard square brush clears alpha (1–16 px); right-click or double-click the tool for size; undo available.</li>
+      <li><strong>Trim to content</strong> — tighten Free / selected cells to non-transparent pixels.</li>
+      <li><strong>View Sync</strong> — keep canvas selection synced with the Cells list (Settings → View Sync; on by default).</li>
+      <li><strong>Pan / zoom</strong> — Move tool, mouse wheel, two-finger scroll, pinch; Space / middle-mouse pan on other tools.</li>
+      <li><strong>Session</strong> — unsaved slicing can be restored on next launch (local only).</li>
     </ul>
 
-    <h2>Settings</h2>
+    <h2>Settings &amp; UI</h2>
     <dl class="settings">
       <dt>Language</dt>
       <dd>English, 简体中文, 日本語, 한국어.</dd>
       <dt>Button Theme</dt>
       <dd>Charcoal, Blush, Teal, Steel Blue.</dd>
-      <dt>Auto Frame → Min Size…</dt>
-      <dd>Ignore tiny connected components when auto-framing (default skips about ≤ 8×8). Double-click the Auto tool to open this.</dd>
-      <dt>Magic Wand → Tolerance…</dt>
-      <dd>Adjust color-pick sensitivity. Double-click the Wand tool to open this.</dd>
-      <dt>Export Format</dt>
-      <dd>PNG (keeps transparency), JPG / BMP (white background), or match source.</dd>
-      <dt>Filename Template</dt>
-      <dd>Default and custom patterns such as name, prefix_index, tile_index.</dd>
-      <dt>Canvas ↔ list sync</dt>
-      <dd>Keep Free-canvas selection synced with the Cells list (on by default).</dd>
+      <dt>Keyboard Shortcuts</dt>
+      <dd>Help → Keyboard Shortcuts… (open, undo/redo, mode tips, Esc behavior).</dd>
     </dl>
 
     <h2>Who it’s for</h2>
-    <p>Atlas Splitter isn’t for “social-media grids”. It’s for the repetitive slicing work in game pipelines: hundreds of props, character frames, and UI slices inside one large sheet — manual boxing is too slow, and pure grids often don’t line up.</p>
-    <p>On transparent atlases with clear connected shapes, Auto Frame + export is typically around a couple of minutes. When backgrounds are complex, Free mode + Magic Wand is a reliable fallback — with undo and iterative edits.</p>
+    <p>Built for indie / small-team 2D game developers and pixel artists — not “social-media grids.” On clear transparent atlases, Auto Frame + export is often about a couple of minutes. Complex backgrounds: Freehand + Wand, iteratively, with undo.</p>
 
     <h2>Licensing</h2>
     <ul>
-      <li>One-time purchase</li>
-      <li>Short workflow: open → Grid or Free → export</li>
-      <li>Built for indie devs, pixel artists, and freelancers</li>
+      <li>One-time purchase, $7.99 (not a subscription).</li>
+      <li>macOS desktop app; delivered as a notarized .dmg from the website, and submitted to the Mac App Store.</li>
+      <li>You are responsible for the copyright of images you open and export.</li>
     </ul>
-
-    <h2>Changelog</h2>
-    <p>Initial release stage. Notable tools already included:</p>
-    <table>
-      <thead><tr><th>Feature</th><th>Notes</th></tr></thead>
-      <tbody>
-        <tr><td>Trim to content</td><td>Tighten Free / selected cells to non-transparent pixels</td></tr>
-        <tr><td>Wand expand / contract</td><td>Selection ±1 px hard morphology</td></tr>
-        <tr><td>Filename templates</td><td>Settings → Filename Template</td></tr>
-        <tr><td>Eraser</td><td>Hard square brush clearing alpha (1–16 px); undo supported</td></tr>
-      </tbody>
-    </table>
-    <p>Future improvements will be posted here.</p>
 
     <h2>Support &amp; privacy</h2>
     <div class="contact-box">
       <p><strong>Contact:</strong> <a href="mailto:917097871@qq.com">917097871@qq.com</a></p>
-      <p><strong>Privacy:</strong> <a href="../../privacy/">Privacy Policy</a></p>
-      <p><strong>Terms:</strong> <a href="../../terms/">Terms of Service</a></p>
+      <p><strong>Privacy:</strong> <a href="../../privacy/">Privacy Policy</a> · <strong>Terms:</strong> <a href="../../terms/">Terms of Service</a></p>
     </div>
     <h3>Common questions</h3>
     <ul>
-      <li><strong>How do I open an image?</strong> File → Open, or open Samples from the app bundle.</li>
-      <li><strong>Export formats:</strong> PNG / JPG / BMP to a folder you choose.</li>
-      <li><strong>Privacy:</strong> images stay on your Mac. See the Privacy Policy.</li>
+      <li><strong>How do I open an image?</strong> File → Open, drag &amp; drop, or use Samples in the app bundle.</li>
+      <li><strong>Which formats?</strong> Open and export PNG / JPG / JPEG / BMP. Export can also write Atlas + JSON.</li>
+      <li><strong>Privacy?</strong> Processing is local on your Mac — see the Privacy Policy.</li>
     </ul>
 
     <footer class="page">
