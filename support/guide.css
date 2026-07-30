@@ -1,0 +1,83 @@
+/* Shared support guide styles */
+:root {
+  --ink: #1a1a1a;
+  --muted: #5a5a5a;
+  --line: #e4e4e4;
+  --bg: #f7f5f2;
+  --accent: #2c5f4a;
+  --accent-hover: #234c3c;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans", "Noto Sans CJK", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(1200px 600px at 10% -10%, #ebe6df 0%, transparent 55%),
+    radial-gradient(900px 500px at 100% 0%, #e2ebe6 0%, transparent 50%),
+    var(--bg);
+  line-height: 1.55;
+}
+.wrap { max-width: 42rem; margin: 0 auto; padding: 2rem 1.25rem 3.5rem; }
+.brand {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+  color: var(--muted);
+}
+h1 { font-size: 1.75rem; line-height: 1.2; margin: 0 0 0.5rem; font-weight: 650; }
+.tagline { color: var(--muted); margin: 0 0 1.25rem; }
+.langbar {
+  display: flex; flex-wrap: wrap; gap: 0.5rem 0.85rem;
+  font-size: 0.9rem; margin: 0 0 1.75rem; padding-bottom: 1rem;
+  border-bottom: 1px solid var(--line);
+}
+.langbar a { color: var(--accent); text-decoration: none; }
+.langbar a:hover { text-decoration: underline; text-underline-offset: 0.15em; }
+.langbar a.current { color: var(--ink); font-weight: 650; pointer-events: none; }
+.lede { margin: 0 0 1.25rem; }
+.note {
+  font-size: 0.95rem; color: var(--muted); font-style: italic;
+  margin: 0 0 1.75rem; padding: 0.85rem 1rem;
+  border-left: 3px solid var(--line); background: rgba(255,255,255,0.45);
+}
+h2 { font-size: 1.2rem; margin: 2rem 0 0.65rem; font-weight: 650; }
+h3 { font-size: 1.05rem; margin: 1.35rem 0 0.45rem; font-weight: 650; }
+p, li { color: var(--ink); }
+ul { margin: 0.4rem 0 1rem; padding-left: 1.25rem; }
+li { margin: 0.3rem 0; }
+ol.steps { margin: 0.4rem 0 1rem; padding-left: 1.25rem; }
+ol.steps li { margin: 0.45rem 0; }
+dl.settings { margin: 0.5rem 0 1rem; }
+dl.settings dt { font-weight: 650; margin-top: 0.85rem; }
+dl.settings dd { margin: 0.25rem 0 0; color: var(--muted); }
+table {
+  width: 100%; border-collapse: collapse; font-size: 0.95rem;
+  margin: 0.75rem 0 1.25rem;
+}
+th, td {
+  text-align: left; vertical-align: top;
+  padding: 0.55rem 0.6rem; border-top: 1px solid var(--line);
+}
+th { font-weight: 650; border-top: none; border-bottom: 1px solid var(--line); }
+a { color: var(--accent); }
+footer.page {
+  margin-top: 2.5rem; padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.9rem; color: var(--muted);
+}
+.lang-list { list-style: none; padding: 0; margin: 1rem 0 2rem; }
+.lang-list li { margin: 0; }
+.lang-list a {
+  display: block; padding: 0.85rem 1rem; margin: 0.45rem 0;
+  background: rgba(255,255,255,0.55); border: 1px solid var(--line);
+  text-decoration: none; color: var(--ink); font-weight: 600;
+}
+.lang-list a:hover { border-color: var(--accent); color: var(--accent); }
+.lang-list span { display: block; font-weight: 400; color: var(--muted); font-size: 0.9rem; margin-top: 0.2rem; }
+.contact-box {
+  padding: 1rem 1.1rem; border: 1px solid var(--line);
+  background: rgba(255,255,255,0.55); margin: 1rem 0 1.5rem;
+}

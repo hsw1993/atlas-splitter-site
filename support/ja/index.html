@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Atlas Splitter — サポート（日本語）</title>
+  <meta name="description" content="スプライトシートとアトラスを分割" />
+  <link rel="stylesheet" href="../guide.css" />
+</head>
+<body>
+  <div class="wrap">
+    <p class="brand">Atlas Splitter</p>
+    <h1>Atlas Splitter</h1>
+    <p class="tagline">スプライトシートとアトラスを分割</p>
+    <nav class="langbar" aria-label="Language"><a href="../en/">English</a> · <a href="../zh/">中文</a> · <a href="../ja/" class="current">日本語</a> · <a href="../ko/">한국어</a></nav>
+
+    <p class="lede">Atlas Splitter は、インディーゲーム開発者と 2D / ピクセルアーティスト向けの macOS アトラス分割ツールです。スプライトシート、UI 合成、タイルアトラスをドラッグして、すぐに使える個別画像へ分割できます。アカウント不要・クラウドアップロードなし。素材は常にあなたの Mac に残ります。</p>
+    <p class="note">Mac App Store の掲載は審査中です。公開後にストアリンクを追加します。現在は<a href="../../">公式サイト</a>から購入できます。</p>
+
+    <h2>クイックスタート</h2>
+    <ol class="steps">
+      <li>アトラスを開く（ドラッグ＆ドロップ、または ファイル → 開く）。</li>
+      <li><strong>グリッド</strong>または<strong>フリー</strong>モードを選ぶ。</li>
+      <li>PNG / JPG / BMP を一括書き出しし、ゲームプロジェクトへ投入。</li>
+    </ol>
+
+    <h2>3 つの明確な経路</h2>
+    <h3>1）グリッド（規則的な配置）</h3>
+    <p>スプライトが揃っている場合、セル幅/高さ、行/列、マージン、間隔を設定して一気に分割します。</p>
+
+    <h3>2）フリー（不規則な配置）</h3>
+    <p>揃っていない場合は次が使えます：</p>
+    <ul>
+      <li>魔法の杖での背景除去 + 手動矩形での微調整</li>
+      <li>透明または単色背景をクリック（自動）して多数の個別スプライトを枠付け</li>
+      <li>セル一覧で一括リネームと整理</li>
+    </ul>
+
+    <h3>3）書き出しと端の処理</h3>
+    <ul>
+      <li>不透明範囲に合わせる、または透明パディングを保持 / 追加</li>
+      <li>ファイル名テンプレートで PNG / JPG / BMP を一括書き出し</li>
+      <li>すべてローカル処理 — アップロードなし、ユーザーデータ収集なし</li>
+    </ul>
+
+    <h2>設定</h2>
+    <dl class="settings">
+      <dt>言語</dt>
+      <dd>English、简体中文、日本語、한국어。</dd>
+      <dt>ボタンテーマ</dt>
+      <dd>チャコール、ブラッシュ、ティール、スチールブルー。</dd>
+      <dt>自動フレーム → 最小サイズ…</dt>
+      <dd>自動検出時に小さすぎる連結成分を無視（デフォルトは約 ≤ 8×8 をスキップ）。自動ツールをダブルクリックでも開けます。</dd>
+      <dt>魔法の杖 → 許容値…</dt>
+      <dd>色選択の感度を調整。杖ツールをダブルクリックでも開けます。</dd>
+      <dt>書き出し形式</dt>
+      <dd>PNG（透明度維持）、JPG / BMP（白背景）、またはソースに合わせる。</dd>
+      <dt>ファイル名テンプレート</dt>
+      <dd>名前、prefix_index、tile_index など。</dd>
+      <dt>キャンバス ↔ リスト同期</dt>
+      <dd>フリーキャンバスの選択をセル一覧と同期（デフォルト ON）。</dd>
+    </dl>
+
+    <h2>想定ユーザー</h2>
+    <p>Atlas Splitter は「SNS 用のグリッド分割」向けではありません。ゲーム制作で繰り返される切り分け——大きなシート内の何百もの小物、キャラフレーム、UI スライス——手作業では遅く、純粋なグリッドではしばしば合いません。</p>
+    <p>透明で形状がはっきりしたアトラスなら、自動フレーム + 書き出しはおおよそ数分程度。背景が複雑なときはフリー + 魔法の杖が確実な代替になります（元に戻し可能）。</p>
+
+    <h2>ライセンス</h2>
+    <ul>
+      <li>買い切り</li>
+      <li>短い流れ：開く → グリッド / フリー → 書き出し</li>
+      <li>インディー開発者・ピクセルアーティスト・フリーランス向け</li>
+    </ul>
+
+    <h2>変更履歴</h2>
+    <p>初回リリース段階。すでに含まれる主な機能：</p>
+    <table>
+      <thead><tr><th>機能</th><th>内容</th></tr></thead>
+      <tbody>
+        <tr><td>不透明範囲に合わせる</td><td>フリー / 選択セルを非透明ピクセルに合わせて縮小</td></tr>
+        <tr><td>杖の拡大 / 縮小</td><td>選択範囲 ±1 px の硬い形態処理</td></tr>
+        <tr><td>ファイル名テンプレート</td><td>設定 → ファイル名テンプレート</td></tr>
+        <tr><td>消しゴム</td><td>アルファを消す硬い正方形ブラシ（1–16 px）、元に戻し可</td></tr>
+      </tbody>
+    </table>
+    <p>今後の改善はこのページに掲載します。</p>
+
+    <h2>サポートとプライバシー</h2>
+    <div class="contact-box">
+      <p><strong>連絡先：</strong> <a href="mailto:917097871@qq.com">917097871@qq.com</a></p>
+      <p><strong>プライバシー：</strong> <a href="../../privacy/">プライバシーポリシー</a></p>
+      <p><strong>利用規約：</strong> <a href="../../terms/">利用規約</a></p>
+    </div>
+    <h3>よくある質問</h3>
+    <ul>
+      <li><strong>画像の開き方：</strong>ファイル → 開く、またはアプリ内 Samples。</li>
+      <li><strong>書き出し形式：</strong>PNG / JPG / BMP を選んだフォルダへ。</li>
+      <li><strong>プライバシー：</strong>画像は Mac 上のみで処理。詳細はプライバシーポリシー。</li>
+    </ul>
+
+    <footer class="page">
+      <p>
+        <a href="../../">Home</a> ·
+        <a href="../../privacy/">Privacy</a> ·
+        <a href="../../terms/">Terms</a> ·
+        <a href="../">Support hub</a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
