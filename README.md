@@ -7,6 +7,7 @@ Static marketing + legal + support pages for **Atlas Splitter** (Mac).
 Contents:
 
 - `index.html` — product landing (Creem Buy link)
+- `get/` — **How to get the product** (buy → download `.dmg` → activate) for Creem compliance
 - `privacy/` — Privacy Policy
 - `terms/` — Terms of Service
 - `support/` — Support hub + localized guides

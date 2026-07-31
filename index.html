@@ -106,6 +106,19 @@
     }
     footer a { color: var(--accent); }
     footer .price { color: var(--ink); font-weight: 600; margin-bottom: 0.75rem; }
+
+    .get-box {
+      margin: 0;
+      padding: 1.15rem 1.2rem;
+      background: rgba(255,255,255,0.55);
+      border: 1px solid var(--line);
+      border-radius: 2px;
+    }
+    .get-box h2 { margin: 0 0 0.65rem; }
+    .get-box ol { margin: 0.4rem 0 0.85rem; padding-left: 1.25rem; color: var(--muted); }
+    .get-box li { margin: 0.4rem 0; }
+    .get-box a { color: var(--accent); }
+    .get-box .more { margin: 0; font-family: "Avenir Next", "Segoe UI", sans-serif; font-size: 0.9rem; }
   </style>
 </head>
 <body>
@@ -123,8 +136,9 @@
         <a class="btn btn-ghost" href="privacy/">Privacy</a>
         <a class="btn btn-ghost" href="terms/">Terms</a>
         <a class="btn btn-ghost" href="support/">Support</a>
+        <a class="btn btn-ghost" href="get/">How to get</a>
       </div>
-      <p class="micro">No account. No cloud. Art stays on your Mac.</p>
+      <p class="micro">No account. No cloud. Art stays on your Mac. · <a href="get/" style="color:var(--accent)">How to get the product</a></p>
     </header>
 
     <section>
@@ -147,10 +161,24 @@
       <p class="note">Works best when sprites are clearly separated. Sticky or complex art: use Freehand or Wand.</p>
     </section>
 
+
+    <section id="how-to-get" aria-labelledby="how-to-get-heading">
+      <div class="get-box">
+        <h2 id="how-to-get-heading">How to get the product</h2>
+        <ol>
+          <li><strong>Buy</strong> via <a href="https://www.creem.io/payment/prod_4sYE7FCsPvXCNAAg1f9ke5" target="_blank" rel="noopener noreferrer">Creem checkout</a> ($7.99 one-time).</li>
+          <li><strong>Download</strong> the notarized <code>.dmg</code> from the payment success page, receipt email, or customer portal.</li>
+          <li><strong>Install</strong> on macOS (drag Atlas Splitter into Applications), then <strong>activate</strong> with the <code>AS1.…</code> key emailed after purchase.</li>
+        </ol>
+        <p class="more"><a href="get/">Full steps, re-download &amp; license details →</a></p>
+      </div>
+    </section>
+
     <footer id="buy">
       <p class="price">Atlas Splitter for Mac — one-time purchase, $7.99.</p>
       <p>
         <a href="https://www.creem.io/payment/prod_4sYE7FCsPvXCNAAg1f9ke5" target="_blank" rel="noopener noreferrer">Buy</a> ·
+        <a href="get/">How to get</a> ·
         <a href="privacy/">Privacy</a> ·
         <a href="terms/">Terms</a> ·
         <a href="support/">Support</a>
