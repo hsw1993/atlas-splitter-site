@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Atlas Splitter — Support (English)</title>
-  <meta name="description" content="Mac atlas splitter help: Auto Frame, Grid, Freehand, Magic Wand, Atlas JSON (off/source), export." />
-  <link rel="stylesheet" href="../guide.css" />
+  <title>[1.0.0-4] Atlas Splitter — Support (English)</title>
+  <meta name="description" content="Mac atlas splitter help: Auto Frame, Grid, Freehand, Magic Wand, export." />
+  <link rel="stylesheet" href="../../../guide.css" />
 </head>
 <body>
   <div class="wrap">
@@ -14,10 +14,10 @@
     <p class="tagline">Split game atlases into clean tiles—fast.</p>
     <nav class="langbar" aria-label="Language"><a href="../en/" class="current">English</a> · <a href="../zh/">中文</a> · <a href="../ja/">日本語</a> · <a href="../ko/">한국어</a></nav>
 
-    <p class="version-bar">Latest help draft (may document the <strong>next</strong> release). Shipping snapshot: <a href="../versions/1.0.0-4/en/">App 1.0.0-4</a>. <a href="../versions/">All versions</a></p>
+    <p class="version-bar">Historical snapshot for <strong>App 1.0.0-4</strong> (Creem DMG <code>AtlasSplitter-1.0.0-4.dmg</code>). <a href="../../">All versions</a> · <a href="../../../en/">Latest help</a></p>
 
     <p class="lede">A Mac tool for indie game art: auto-frame sprites from one sheet, grid or freehand boxes, magic wand cleanup, then export locally. No account. No cloud. Art stays on your Mac.</p>
-    <p class="note">Works best when sprites are clearly separated. Sticky or complex art: use Freehand or Wand. Direct purchase is on the <a href="../../">homepage</a> ($7.99 one-time). Mac App Store link will appear here after review.</p>
+    <p class="note">Works best when sprites are clearly separated. Sticky or complex art: use Freehand or Wand. Direct purchase is on the <a href="../../../../">homepage</a> ($7.99 one-time). Mac App Store link will appear here after review.</p>
 
     <h2>Quick start</h2>
     <ol class="steps">
@@ -32,8 +32,8 @@
     <p>In Free mode, click the background once to box many sprites at once — ideal for clear sheets on transparent or solid fills. PNG: click transparent; JPG/BMP: click the solid key color. Settings → Auto Frame → Min Size… (or double-click the Auto tool) skips tiny islands (default about ≤ 8×8).</p>
 
     <h3>Grid &amp; Freehand</h3>
-    <p><strong>Grid:</strong> regular tilesets — set cell size, rows/columns, margins, and spacing. Cell size is the <strong>logical canvas</strong> used for animation alignment. Edge modes: <em>Crop</em> (discard leftover edge pixels; full cells only) or <em>Pad</em> (keep cell size; extra rows/cols filled with transparency). Hover a cell to preview the tile.</p>
-    <p><strong>Free (Freehand):</strong> draw rectangles when the layout is irregular (orange box = logical canvas); resize with handles; organize and rename in the Cells list. Right-click a box for Trim to content, Add to list, Copy Image, or Delete. Overlapping boxes: right-click → Select → #id.</p>
+    <p><strong>Grid:</strong> regular tilesets — set cell size, rows/columns, margins, and spacing. Edge modes: <em>Crop</em> (discard leftover edge pixels; full cells only) or <em>Pad</em> (keep cell size; extra rows/cols filled with transparency). Hover a cell to preview the tile.</p>
+    <p><strong>Free (Freehand):</strong> draw rectangles when the layout is irregular; resize with handles; organize and rename in the Cells list. Right-click a box for Trim to content, Add to list, Copy Image, or Delete. Overlapping boxes: right-click → Select → #id.</p>
 
     <h3>Magic Wand</h3>
     <p>Select and clear backgrounds to transparency when Auto Frame needs a cleaner pass. Click opaque pixels; Shift+click to add. Right-click: Expand 1px / Contract 1px / Make transparent / Invert / Deselect. Double-click the Wand tool (or Settings → Wand → Tolerance…) to adjust sensitivity. Undo / Redo supported.</p>
@@ -41,9 +41,7 @@
     <h3>Export for your pipeline</h3>
     <ul>
       <li>Batch-export individual PNG / JPG / BMP tiles with names you control.</li>
-      <li>Optional <strong>Atlas + JSON</strong> (schema <code>atlas_splitter.atlas/v1</code>): full sheet + frame table, with sample rect plus logical-canvas fields for aligned 2D playback.</li>
-      <li>Per frame: <code>x,y,w,h</code> = sample rect on the sheet (opaque bounds inside the box); <code>sourceW,sourceH</code> = logical canvas (grid cell / Free orange box); <code>offX,offY</code> = sample offset from the canvas top-left. Fully transparent cells may stay identity (off=0 and source equals sample size).</li>
-      <li>Grid and Free atlas export both write the opaque sample inside each logical canvas — helpful for aligned playback (e.g. companion Anim Previewer).</li>
+      <li>Optional <strong>Atlas + JSON</strong> export for common 2D pipelines (one sheet + frame table).</li>
       <li>Settings → Export Format: PNG (keeps transparency), JPG / BMP (white background), or match source.</li>
       <li>Settings → Filename Template: Default (Name or tile_###), {name}, {name}_{index}, tile_{index}.</li>
     </ul>
@@ -51,7 +49,7 @@
     <h2>More tools in Free mode</h2>
     <ul>
       <li><strong>Eraser</strong> — hard square brush clears alpha (1–16 px); right-click or double-click the tool for size; undo available.</li>
-      <li><strong>Trim to content</strong> — compute the opaque sample and offset; the Free orange box (logical canvas) size stays the same.</li>
+      <li><strong>Trim to content</strong> — tighten Free / selected cells to non-transparent pixels.</li>
       <li><strong>View Sync</strong> — keep canvas selection synced with the Cells list (Settings → View Sync; on by default).</li>
       <li><strong>Pan / zoom</strong> — Move tool, mouse wheel, two-finger scroll, pinch; Space / middle-mouse pan on other tools.</li>
       <li><strong>Session</strong> — unsaved slicing can be restored on next launch (local only).</li>
@@ -80,22 +78,21 @@
     <h2>Support &amp; privacy</h2>
     <div class="contact-box">
       <p><strong>Contact:</strong> <a href="mailto:917097871@qq.com">917097871@qq.com</a></p>
-      <p><strong>Privacy:</strong> <a href="../../privacy/">Privacy Policy</a> · <strong>Terms:</strong> <a href="../../terms/">Terms of Service</a></p>
+      <p><strong>Privacy:</strong> <a href="../../../../privacy/">Privacy Policy</a> · <strong>Terms:</strong> <a href="../../../../terms/">Terms of Service</a></p>
     </div>
     <h3>Common questions</h3>
     <ul>
       <li><strong>How do I open an image?</strong> File → Open, drag &amp; drop, or use Samples in the app bundle.</li>
-      <li><strong>Which formats?</strong> Open and export PNG / JPG / JPEG / BMP. Export can also write Atlas + JSON (with <code>offX/offY</code>, <code>sourceW/sourceH</code> — see Export above).</li>
-      <li><strong>What are off / source in the JSON?</strong> Logical canvas placement (sample offset inside the box), not a foot/center pivot. Older files missing these fields are treated as identity on import.</li>
+      <li><strong>Which formats?</strong> Open and export PNG / JPG / JPEG / BMP. Export can also write Atlas + JSON.</li>
       <li><strong>Privacy?</strong> Processing is local on your Mac — see the Privacy Policy.</li>
     </ul>
 
     <footer class="page">
       <p>
-        <a href="../../">Home</a> ·
-        <a href="../../privacy/">Privacy</a> ·
-        <a href="../../terms/">Terms</a> ·
-        <a href="../">Support hub</a> · <a href="../versions/">Version history</a>
+        <a href="../../../../">Home</a> ·
+        <a href="../../../../privacy/">Privacy</a> ·
+        <a href="../../../../terms/">Terms</a> ·
+        <a href="../../../">Support hub</a>
       </p>
     </footer>
   </div>

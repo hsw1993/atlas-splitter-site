@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Atlas Splitter — 支持说明（中文）</title>
-  <meta name="description" content="Mac 图集切分帮助：自动框选、网格、手绘、魔棒、图集 JSON（off/source）、导出。" />
-  <link rel="stylesheet" href="../guide.css" />
+  <title>[1.0.0-4] Atlas Splitter — 支持说明（中文）</title>
+  <meta name="description" content="Mac 图集切分帮助：自动框选、网格、手绘、魔棒、导出。" />
+  <link rel="stylesheet" href="../../../guide.css" />
 </head>
 <body>
   <div class="wrap">
@@ -14,10 +14,10 @@
     <p class="tagline">把游戏图集，切成干净的小图。</p>
     <nav class="langbar" aria-label="Language"><a href="../en/">English</a> · <a href="../zh/" class="current">中文</a> · <a href="../ja/">日本語</a> · <a href="../ko/">한국어</a></nav>
 
-    <p class="version-bar">最新说明草稿（可能对应<strong>下一版</strong>）。已上架快照：<a href="../versions/1.0.0-4/zh/">App 1.0.0-4</a>。<a href="../versions/">版本帮助历史</a></p>
+    <p class="version-bar">历史快照：<strong>App 1.0.0-4</strong>（Creem DMG <code>AtlasSplitter-1.0.0-4.dmg</code>）。<a href="../../">全部版本</a> · <a href="../../../zh/">最新帮助</a></p>
 
     <p class="lede">面向独立游戏美术的 Mac 切图工具：一张图集自动框选、网格或手绘框、魔棒清理，再本机导出。无账号、不上传，素材只留在你的 Mac。</p>
-    <p class="note">图元分离清晰时效果最好；粘连或背景复杂时，用手绘或魔棒补。官网<a href="../../">首页</a>可一次性购买（$7.99）。Mac App Store 过审后会在此补充商店链接。</p>
+    <p class="note">图元分离清晰时效果最好；粘连或背景复杂时，用手绘或魔棒补。官网<a href="../../../../">首页</a>可一次性购买（$7.99）。Mac App Store 过审后会在此补充商店链接。</p>
 
     <h2>快速开始</h2>
     <ol class="steps">
@@ -32,8 +32,8 @@
     <p>在手绘模式中点一下背景，即可批量框出图元——透明底或纯色底效果最好。PNG 点透明；JPG/BMP 点实色底。设置 → 自动框选 → 最小尺寸…（或双击「框选」工具）可忽略过小岛（默认约 ≤ 8×8）。</p>
 
     <h3>网格与手绘</h3>
-    <p><strong>网格：</strong>规整 tileset — 设置格子大小、行列、外边距与间距。格子尺寸即<strong>逻辑画布</strong>（动画对齐用）。边缘模式：<em>裁掉余量</em>（丢弃凑不满一格的边缘像素）或<em>透明补边</em>（格子大小不变，多出的行列用透明填充）。悬停格子可预览图元。</p>
-    <p><strong>手绘：</strong>布局不规则时自由画框（橙框 = 逻辑画布）；拖手柄改大小；在单元列表中整理与重命名。右键可「收紧到内容」「加入列表」「复制图像」「删除」。重叠时：右键 → 选中 → #id。</p>
+    <p><strong>网格：</strong>规整 tileset — 设置格子大小、行列、外边距与间距。边缘模式：<em>裁掉余量</em>（丢弃凑不满一格的边缘像素）或<em>透明补边</em>（格子大小不变，多出的行列用透明填充）。悬停格子可预览图元。</p>
+    <p><strong>手绘：</strong>布局不规则时自由画框；拖手柄改大小；在单元列表中整理与重命名。右键可「收紧到内容」「加入列表」「复制图像」「删除」。重叠时：右键 → 选中 → #id。</p>
 
     <h3>魔棒</h3>
     <p>自动框选不够干净时，用魔棒选区并清成透明。点击不透明像素；Shift+点击加选。右键：扩张 1px / 收缩 1px / 设为透明 / 反选 / 取消选择。双击魔棒（或 设置 → 魔棒 → 容差…）调节灵敏度。支持撤销 / 重做。</p>
@@ -41,9 +41,7 @@
     <h3>导出到你的管线</h3>
     <ul>
       <li>批量导出 PNG / JPG / BMP 小图，文件名可按习惯控制。</li>
-      <li>可选<strong>图集 + JSON</strong>（schema <code>atlas_splitter.atlas/v1</code>）：原图整图 + 帧表，含采样矩形与逻辑画布字段，便于 2D 对齐播放。</li>
-      <li>每帧字段：<code>x,y,w,h</code> = 图集上实际采样（框内不透明外接）；<code>sourceW,sourceH</code> = 逻辑画布（网格格 / 手绘橙框）；<code>offX,offY</code> = 采样相对逻辑画布左上的偏移。全透明格可为恒等（off=0 且 source=采样尺寸）。</li>
-      <li>网格与手绘导出图集时都会按逻辑画布内不透明区域写入采样，便于多帧对齐播放（如配套 Anim Previewer）。</li>
+      <li>可选<strong>图集 + JSON</strong>，方便常见 2D 管线（整图 + 帧表）。</li>
       <li>设置 → 导出格式：PNG（保留透明）、JPG / BMP（白底），或跟随源图。</li>
       <li>设置 → 文件名模板：默认（名称或 tile_###）、{name}、{name}_{index}、tile_{index}。</li>
     </ul>
@@ -51,7 +49,7 @@
     <h2>手绘模式更多工具</h2>
     <ul>
       <li><strong>橡皮</strong> — 硬方刷清除透明度（1–16 像素）；右键或双击工具改大小；可撤销。</li>
-      <li><strong>收紧到内容</strong> — 按非透明像素计算采样与偏移；手绘橙框（逻辑画布）尺寸保持不变。</li>
+      <li><strong>收紧到内容</strong> — 按非透明像素收紧手绘 / 选中格子。</li>
       <li><strong>图表联动</strong> — 画布选区与单元列表同步（设置 → 图表联动；默认开启）。</li>
       <li><strong>平移 / 缩放</strong> — 移动工具、滚轮、双指滑动、捏合；其它工具可用 Space / 中键平移。</li>
       <li><strong>会话</strong> — 未保存的切图可在下次启动时恢复（仅本机）。</li>
@@ -80,22 +78,21 @@
     <h2>支持与隐私</h2>
     <div class="contact-box">
       <p><strong>联系：</strong> <a href="mailto:917097871@qq.com">917097871@qq.com</a></p>
-      <p><strong>隐私：</strong> <a href="../../privacy/">隐私政策</a> · <strong>条款：</strong> <a href="../../terms/">服务条款</a></p>
+      <p><strong>隐私：</strong> <a href="../../../../privacy/">隐私政策</a> · <strong>条款：</strong> <a href="../../../../terms/">服务条款</a></p>
     </div>
     <h3>常见问题</h3>
     <ul>
       <li><strong>如何打开？</strong>文件 → 打开、拖放，或使用应用内 Samples。</li>
-      <li><strong>格式？</strong>打开与导出支持 PNG / JPG / JPEG / BMP；也可导出图集 + JSON（含 <code>offX/offY</code>、<code>sourceW/sourceH</code>，见上文「导出」）。</li>
-      <li><strong>JSON 里 off / source 是什么？</strong>逻辑画布与采样摆放，不是脚底锚点（pivot）。旧文件若缺这些字段，导入时按恒等处理。</li>
+      <li><strong>格式？</strong>打开与导出支持 PNG / JPG / JPEG / BMP；也可导出图集 + JSON。</li>
       <li><strong>隐私？</strong>仅本机处理，详见隐私政策。</li>
     </ul>
 
     <footer class="page">
       <p>
-        <a href="../../">Home</a> ·
-        <a href="../../privacy/">Privacy</a> ·
-        <a href="../../terms/">Terms</a> ·
-        <a href="../">Support hub</a> · <a href="../versions/">版本帮助历史</a>
+        <a href="../../../../">Home</a> ·
+        <a href="../../../../privacy/">Privacy</a> ·
+        <a href="../../../../terms/">Terms</a> ·
+        <a href="../../../">Support hub</a>
       </p>
     </footer>
   </div>

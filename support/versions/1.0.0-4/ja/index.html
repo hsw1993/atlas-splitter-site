@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Atlas Splitter — サポート（日本語）</title>
+  <title>[1.0.0-4] Atlas Splitter — サポート（日本語）</title>
   <meta name="description" content="Mac アトラス分割ヘルプ：自動フレーム、グリッド、フリー、魔法の杖、書き出し。" />
-  <link rel="stylesheet" href="../guide.css" />
+  <link rel="stylesheet" href="../../../guide.css" />
 </head>
 <body>
   <div class="wrap">
@@ -14,10 +14,10 @@
     <p class="tagline">ゲームアトラスを、きれいなタイルへ—すばやく。</p>
     <nav class="langbar" aria-label="Language"><a href="../en/">English</a> · <a href="../zh/">中文</a> · <a href="../ja/" class="current">日本語</a> · <a href="../ko/">한국어</a></nav>
 
-    <p class="version-bar">最新ヘルプ草稿（<strong>次のリリース</strong>向けの場合あり）。出荷済みスナップショット：<a href="../versions/1.0.0-4/ja/">App 1.0.0-4</a>。<a href="../versions/">バージョン履歴</a></p>
+    <p class="version-bar">履歴スナップショット：<strong>App 1.0.0-4</strong>（Creem DMG <code>AtlasSplitter-1.0.0-4.dmg</code>）。<a href="../../">すべてのバージョン</a> · <a href="../../../ja/">最新ヘルプ</a></p>
 
     <p class="lede">インディーゲーム向け Mac 切り分けツール。1 枚のアトラスから自動フレーム、グリッド / フリー描画、魔法の杖での清掃、そしてローカル書き出し。アカウント不要・クラウドなし。素材は Mac に残ります。</p>
-    <p class="note">スプライトがはっきり分かれているときに最も効果的。粘着や複雑な背景はフリーまたは杖で補ってください。<a href="../../">公式サイト</a>で買い切り（$7.99）。Mac App Store 審査後にストアリンクを追加します。</p>
+    <p class="note">スプライトがはっきり分かれているときに最も効果的。粘着や複雑な背景はフリーまたは杖で補ってください。<a href="../../../../">公式サイト</a>で買い切り（$7.99）。Mac App Store 審査後にストアリンクを追加します。</p>
 
     <h2>クイックスタート</h2>
     <ol class="steps">
@@ -32,8 +32,8 @@
     <p>フリーモードで背景を 1 回クリックすると、多数のスプライトを一括枠取り — 透明または単色塗りで分かれているシート向け。PNG は透明、JPG/BMP は単色キーをクリック。設定 → 自動フレーム → 最小サイズ…（または自動ツールをダブルクリック）で小さい島を無視（デフォルト約 ≤ 8×8）。</p>
 
     <h3>グリッドとフリーハンド</h3>
-    <p><strong>グリッド：</strong>規則的なタイルセット — セルサイズ、行/列、マージン、間隔。セルサイズはアニメ揃え用の<strong>論理キャンバス</strong>。端の処理：<em>切り抜き</em>（端の余りを破棄、完全なセルのみ）または<em>パディング</em>（セルサイズ維持、余分な行列は透明）。セルにホバーでプレビュー。</p>
-    <p><strong>フリー：</strong>不規則な配置は矩形を手描き（オレンジ枠 = 論理キャンバス）。ハンドルでリサイズ。セル一覧で整理・リネーム。右クリックで不透明範囲に合わせる / リストに追加 / 画像をコピー / 削除。重なり：右クリック → 選択 → #id。</p>
+    <p><strong>グリッド：</strong>規則的なタイルセット — セルサイズ、行/列、マージン、間隔。端の処理：<em>切り抜き</em>（端の余りを破棄、完全なセルのみ）または<em>パディング</em>（セルサイズ維持、余分な行列は透明）。セルにホバーでプレビュー。</p>
+    <p><strong>フリー：</strong>不規則な配置は矩形を手描き。ハンドルでリサイズ。セル一覧で整理・リネーム。右クリックで不透明範囲に合わせる / リストに追加 / 画像をコピー / 削除。重なり：右クリック → 選択 → #id。</p>
 
     <h3>魔法の杖</h3>
     <p>自動フレームのあとが汚れているときに、背景を選んで透明化。不透明をクリック、Shift+クリックで追加。右クリック：1px 拡張 / 1px 縮小 / 透明化 / 反転 / 選択解除。杖をダブルクリック（または 設定 → 魔法の杖 → 許容値…）で感度調整。元に戻す / やり直し対応。</p>
@@ -41,9 +41,7 @@
     <h3>パイプライン向け書き出し</h3>
     <ul>
       <li>PNG / JPG / BMP タイルを一括書き出し。名前は自分で制御。</li>
-      <li>任意の<strong>アトラス + JSON</strong>（schema <code>atlas_splitter.atlas/v1</code>）：元画像 1 枚 + フレーム表。サンプル矩形と論理キャンバス欄を含み、2D の揃え再生向け。</li>
-      <li>各フレーム：<code>x,y,w,h</code> = シート上の実サンプル（枠内の不透明外接）；<code>sourceW,sourceH</code> = 論理キャンバス（グリッドセル / フリーのオレンジ枠）；<code>offX,offY</code> = 論理キャンバス左上からのオフセット。全透明セルは恒等（off=0、source=サンプルサイズ）のままになることがあります。</li>
-      <li>グリッド / フリーとも、アトラス書き出し時は論理キャンバス内の不透明領域をサンプルとして記録 — 複数フレームの揃え再生に便利（例：Anim Previewer）。</li>
+      <li>任意の<strong>アトラス + JSON</strong>（1 枚のシート + フレーム表）。</li>
       <li>設定 → 書き出し形式：PNG（透明維持）、JPG / BMP（白背景）、またはソースに合わせる。</li>
       <li>設定 → ファイル名テンプレート：デフォルト（名称または tile_###）、{name}、{name}_{index}、tile_{index}。</li>
     </ul>
@@ -51,7 +49,7 @@
     <h2>フリーモードのその他ツール</h2>
     <ul>
       <li><strong>消しゴム</strong> — アルファを消す硬い正方形（1–16 px）。サイズは右クリックまたはダブルクリック。元に戻し可。</li>
-      <li><strong>不透明範囲に合わせる</strong> — 不透明サンプルとオフセットを計算。フリーのオレンジ枠（論理キャンバス）サイズは変えません。</li>
+      <li><strong>不透明範囲に合わせる</strong> — フリー / 選択セルを非透明ピクセルに合わせて縮小。</li>
       <li><strong>ビュー同期</strong> — キャンバス選択とセル一覧を同期（設定 → ビュー同期、デフォルト ON）。</li>
       <li><strong>パン / ズーム</strong> — 移動ツール、ホイール、二本指スクロール、ピンチ。他ツールは Space / 中ボタン。</li>
       <li><strong>セッション</strong> — 未保存の切り分けを次回起動時に復元（ローカルのみ）。</li>
@@ -80,22 +78,21 @@
     <h2>サポートとプライバシー</h2>
     <div class="contact-box">
       <p><strong>連絡先：</strong> <a href="mailto:917097871@qq.com">917097871@qq.com</a></p>
-      <p><strong>プライバシー：</strong> <a href="../../privacy/">プライバシーポリシー</a> · <strong>規約：</strong> <a href="../../terms/">利用規約</a></p>
+      <p><strong>プライバシー：</strong> <a href="../../../../privacy/">プライバシーポリシー</a> · <strong>規約：</strong> <a href="../../../../terms/">利用規約</a></p>
     </div>
     <h3>よくある質問</h3>
     <ul>
       <li><strong>開き方：</strong>ファイル → 開く、ドラッグ＆ドロップ、または Samples。</li>
-      <li><strong>形式：</strong>PNG / JPG / JPEG / BMP。アトラス + JSON も可（<code>offX/offY</code>、<code>sourceW/sourceH</code> — 上記「書き出し」参照）。</li>
-      <li><strong>JSON の off / source は？</strong>論理キャンバス上の配置であり、足場 / 中心の pivot ではありません。古いファイルに無い場合は恒等として読みます。</li>
+      <li><strong>形式：</strong>PNG / JPG / JPEG / BMP。アトラス + JSON も可。</li>
       <li><strong>プライバシー：</strong>Mac 上のみで処理。詳細はプライバシーポリシー。</li>
     </ul>
 
     <footer class="page">
       <p>
-        <a href="../../">Home</a> ·
-        <a href="../../privacy/">Privacy</a> ·
-        <a href="../../terms/">Terms</a> ·
-        <a href="../">Support hub</a> · <a href="../versions/">バージョン履歴</a>
+        <a href="../../../../">Home</a> ·
+        <a href="../../../../privacy/">Privacy</a> ·
+        <a href="../../../../terms/">Terms</a> ·
+        <a href="../../../">Support hub</a>
       </p>
     </footer>
   </div>
