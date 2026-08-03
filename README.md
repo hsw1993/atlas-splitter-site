@@ -12,8 +12,9 @@ Contents:
 - `terms/` — Terms of Service
 - `support/` — Support hub + localized guides
   - `support/en|zh|ja|ko/` — **latest** help (editable; may document the next release)
-  - `support/versions/` — index of frozen help per shipped app build
-  - `support/versions/{ver}-{build}/{lang}/` — **read-only** snapshot (e.g. `1.0.0-4`)
+  - `support/versions/` — language picker for the version catalog
+  - `support/versions/en/` · `support/versions/zh/` — catalog by channel (MAS vs website); anchors `#mas` / `#direct`
+  - `support/versions/{ver}-{build}/{lang}/` — **read-only** snapshot (e.g. `1.0.0-4`); MAS freezes use `{ver}-{build}-mas`
 
 Version id matches the notarized DMG: `AtlasSplitter-{CFBundleShortVersionString}-{CFBundleVersion}.dmg`.
 
@@ -35,6 +36,8 @@ After deploy, spot-check:
 - https://atlassplitter.com/support/
 - https://atlassplitter.com/support/en/
 - https://atlassplitter.com/support/versions/
+- https://atlassplitter.com/support/versions/en/
+- https://atlassplitter.com/support/versions/zh/
 - https://atlassplitter.com/support/versions/1.0.0-4/zh/
 
 ## Freeze help on each ship
@@ -44,7 +47,7 @@ When uploading a new Creem / MAS build:
 1. Finish editing `support/{en,zh,ja,ko}/` for that build.
 2. Copy into `support/versions/{ver}-{build}/{lang}/`.
 3. Fix relative links (`guide.css` → `../../../guide.css`; home/privacy up four levels).
-4. Add a `.version-bar` (historical snapshot) and a row on `support/versions/index.html`.
+4. Add a `.version-bar` (historical snapshot) and a row on `support/versions/en/index.html` **and** `support/versions/zh/index.html` (matching channel table).
 5. Do **not** edit archived trees afterward.
 
 Engineering notes: GameEngine `atlas_splitter/docs/123-*-官网Support按版本冻结归档.md`.
