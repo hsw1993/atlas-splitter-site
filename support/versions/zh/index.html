@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Atlas Splitter — 支持版帮助历史（中文）</title>
+  <meta name="description" content="Atlas Splitter 版本帮助索引：Mac App Store 与官网/Creem 直销分列。" />
+  <link rel="stylesheet" href="../../guide.css" />
+</head>
+<body>
+  <div class="wrap">
+    <p class="brand">Atlas Splitter</p>
+    <h1>支持 · 版本帮助历史</h1>
+    <p class="tagline">帮助归档按<strong>购买渠道</strong>分列。功能说明草稿在 <a href="../../">/support/{lang}/</a>；渠道售后在 <a href="../../mas/">mas/</a> 与 <a href="../../direct/">direct/</a>。</p>
+
+    <nav class="langbar" aria-label="语言">
+      <a href="../en/">English</a> ·
+      <a href="./" class="current">中文</a> ·
+      <a href="../">语言入口</a>
+    </nav>
+    <nav class="langbar" aria-label="跳转">
+      <a href="#mas">Mac App Store</a> ·
+      <a href="#direct">官网 / Creem</a> ·
+      <a href="../../">Support 总入口</a>
+    </nav>
+
+    <p class="note">
+      <strong>命名：</strong>官网 DMG 使用 <code>{CFBundleShortVersionString}-{CFBundleVersion}</code>
+      （例 <code>1.0.0-7</code> ↔ <code>AtlasSplitter-1.0.0-7.dmg</code>）。
+      Mac App Store 使用营销版本 + build，冻结目录为 <code>{ver}-{build}-mas</code>
+      （例 <code>1.0.0-4-mas</code>、<code>1.1.0-8-mas</code>）。
+    </p>
+
+    <h2 id="mas">Mac App Store</h2>
+    <p class="lede">商店版：无 AS1；功能以当时上架二进制为准。渠道说明：<a href="../../mas/">/support/mas/</a>。</p>
+    <table>
+      <thead>
+        <tr>
+          <th>版本</th>
+          <th>帮助</th>
+          <th>说明</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1.1.0（即将）</strong></td>
+          <td>—</td>
+          <td>计划中的商店更新（全功能）。上架后冻结目录为 <code>1.1.0-{build}-mas/</code>。</td>
+        </tr>
+        <tr>
+          <td><strong>1.0.0 (4)</strong></td>
+          <td><a href="../../mas/">渠道 FAQ</a></td>
+          <td>已在 Mac App Store 在架（build 4）。尚无四语冻结快照；请用渠道 FAQ + 共用功能说明。以后冻结使用 <code>-mas</code> 后缀。</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="direct">官网 / Creem（直销）</h2>
+    <p class="lede">官网包：AS1 门闸；功能以当时 DMG 为准。渠道说明：<a href="../../direct/">/support/direct/</a>。</p>
+    <table>
+      <thead>
+        <tr>
+          <th>版本</th>
+          <th>帮助</th>
+          <th>说明</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1.0.0-7</strong></td>
+          <td>
+            <a href="../../en/">EN</a> ·
+            <a href="../../zh/">中文</a> ·
+            <a href="../../ja/">日本語</a> ·
+            <a href="../../ko/">한국어</a>
+            · <a href="../../direct/">渠道 FAQ</a>
+          </td>
+          <td>当前 Creem 候选 DMG。缩功能：无橡皮 / Trim；JSON <code>off</code>/<code>source</code> 为恒等。说明暂在 <code>/support/{lang}/</code>，日后可冻成 <code>1.0.0-7-direct</code>。</td>
+        </tr>
+        <tr>
+          <td><strong>1.0.0-4</strong></td>
+          <td>
+            <a href="../1.0.0-4/en/">EN</a> ·
+            <a href="../1.0.0-4/zh/">中文</a> ·
+            <a href="../1.0.0-4/ja/">日本語</a> ·
+            <a href="../1.0.0-4/ko/">한국어</a>
+          </td>
+          <td>历史冻结（早期直销）。Creem 侧已被 1.0.0-7 取代。属<strong>直销谱系</strong>，不是商店版。</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>最新草稿（共用功能说明）</h2>
+    <p class="lede">四语功能说明可能超前于已发版。<strong>购买 / 激活 / 退款</strong>请看渠道页，不要混用。</p>
+    <ul class="lang-list">
+      <li><a href="../../en/">English<span>当前草稿</span></a></li>
+      <li><a href="../../zh/">中文<span>当前维护中的最新说明</span></a></li>
+      <li><a href="../../ja/">日本語<span>维护中的最新说明</span></a></li>
+      <li><a href="../../ko/">한국어<span>유지 중인 최신 도움말</span></a></li>
+    </ul>
+
+    <h2>如何冻结</h2>
+    <p class="lede">发新包时，把当天帮助复制到 <code>support/versions/{id}/</code>。Mac App Store 用 <code>-mas</code> 后缀；官网 DMG 用 <code>{ver}-{build}</code> 或 <code>-direct</code>。冻结正文事后不要改正文。</p>
+
+    <footer class="page">
+      <p>
+        <a href="../../">← Support 总入口</a> ·
+        <a href="../../mas/">Mac App Store</a> ·
+        <a href="../../direct/">官网 / Creem</a> ·
+        <a href="../../../">首页</a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>

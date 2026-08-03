@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Atlas Splitter — Support version history (EN)</title>
+  <meta name="description" content="English index of frozen Atlas Splitter help: Mac App Store vs website/Creem builds." />
+  <link rel="stylesheet" href="../../guide.css" />
+</head>
+<body>
+  <div class="wrap">
+    <p class="brand">Atlas Splitter</p>
+    <h1>Support version history</h1>
+    <p class="tagline">Help archives are split by <strong>purchase channel</strong>. Product how-to drafts stay under <a href="../../">/support/{lang}/</a>; channel FAQs under <a href="../../mas/">mas/</a> and <a href="../../direct/">direct/</a>.</p>
+
+    <nav class="langbar" aria-label="Language">
+      <a href="./" class="current">English</a> ·
+      <a href="../zh/">中文</a> ·
+      <a href="../">All languages</a>
+    </nav>
+    <nav class="langbar" aria-label="Jump">
+      <a href="#mas">Mac App Store</a> ·
+      <a href="#direct">Website / Creem</a> ·
+      <a href="../../">Support hub</a>
+    </nav>
+
+    <p class="note">
+      <strong>Naming:</strong> Website DMG uses <code>{CFBundleShortVersionString}-{CFBundleVersion}</code>
+      (e.g. <code>1.0.0-7</code> ↔ <code>AtlasSplitter-1.0.0-7.dmg</code>).
+      Mac App Store uses marketing version + build, frozen as <code>{ver}-{build}-mas</code>
+      (e.g. <code>1.0.0-4-mas</code>, <code>1.1.0-8-mas</code>).
+    </p>
+
+    <h2 id="mas">Mac App Store</h2>
+    <p class="lede">Store builds: no AS1 key; features match the binary that shipped. Channel FAQ: <a href="../../mas/">/support/mas/</a>.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>VERSION</th>
+          <th>Help</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1.1.0 (upcoming)</strong></td>
+          <td>—</td>
+          <td>Planned MAS update (full features). Freeze folder will be <code>1.1.0-{build}-mas/</code> when the store build ships.</td>
+        </tr>
+        <tr>
+          <td><strong>1.0.0 (4)</strong></td>
+          <td><a href="../../mas/">Channel FAQ</a></td>
+          <td>Live on the Mac App Store (build 4). No frozen four-language snapshot yet; use the channel FAQ plus shared how-to. Future freezes use the <code>-mas</code> suffix.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="direct">Website / Creem (direct sale)</h2>
+    <p class="lede">Website builds: AS1 license gate; features match that DMG. Channel FAQ: <a href="../../direct/">/support/direct/</a>.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>VERSION</th>
+          <th>Help</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1.0.0-7</strong></td>
+          <td>
+            <a href="../../en/">EN</a> ·
+            <a href="../../zh/">中文</a> ·
+            <a href="../../ja/">日本語</a> ·
+            <a href="../../ko/">한국어</a>
+            · <a href="../../direct/">Channel FAQ</a>
+          </td>
+          <td>Current Creem candidate DMG. Reduced: no Eraser / Trim; JSON <code>off</code>/<code>source</code> identity. How-to lives under <code>/support/{lang}/</code> until a dedicated freeze is cut (optional id <code>1.0.0-7-direct</code> later).</td>
+        </tr>
+        <tr>
+          <td><strong>1.0.0-4</strong></td>
+          <td>
+            <a href="../1.0.0-4/en/">EN</a> ·
+            <a href="../1.0.0-4/zh/">中文</a> ·
+            <a href="../1.0.0-4/ja/">日本語</a> ·
+            <a href="../1.0.0-4/ko/">한국어</a>
+          </td>
+          <td>Historical freeze (early direct sale). Superseded by 1.0.0-7 for Creem. <strong>Direct-sale lineage</strong>, not MAS.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Latest drafts (shared how-to)</h2>
+    <p class="lede">Four-language how-to may run ahead of shipped builds. For buy / activate / refund, use the channel pages — do not mix channels.</p>
+    <ul class="lang-list">
+      <li><a href="../../en/">English<span>Current draft — may document the next release</span></a></li>
+      <li><a href="../../zh/">中文<span>Latest maintained notes</span></a></li>
+      <li><a href="../../ja/">日本語<span>Latest maintained notes</span></a></li>
+      <li><a href="../../ko/">한국어<span>Latest maintained notes</span></a></li>
+    </ul>
+
+    <h2>How freezes work</h2>
+    <p class="lede">When shipping a new build, copy that day’s help into <code>support/versions/{id}/</code>. Use a <code>-mas</code> suffix for Mac App Store; use <code>{ver}-{build}</code> or <code>-direct</code> for website DMGs. Do not edit frozen page bodies afterward.</p>
+
+    <footer class="page">
+      <p>
+        <a href="../../">← Support hub</a> ·
+        <a href="../../mas/">Mac App Store</a> ·
+        <a href="../../direct/">Website / Creem</a> ·
+        <a href="../../../">Home</a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
