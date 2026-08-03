@@ -95,3 +95,41 @@ footer.page {
   background: rgba(0,0,0,0.05);
   padding: 0.1em 0.35em;
 }
+.channel-grid {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1rem 0 1.75rem;
+}
+@media (min-width: 560px) {
+  .channel-grid { grid-template-columns: 1fr 1fr; }
+}
+.channel-card {
+  display: block;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.65);
+  text-decoration: none;
+  color: var(--ink);
+}
+.channel-card:hover { border-color: var(--accent); }
+.channel-card strong {
+  display: block;
+  font-size: 1.05rem;
+  margin-bottom: 0.35rem;
+  color: var(--accent);
+}
+.channel-card span {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-weight: 400;
+}
+.channel-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 650;
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+}
